@@ -18,11 +18,11 @@ public class APITest {
     @Test
     void createUser() {
         HashMap data = new HashMap();
-        data.put("name", "Lenovo Book");
-        data.put("job", "leader35678");
+        data.put("name", "Test User");
+        data.put("job", "Team Lead");
 
         given().contentType("application/json").body(data).
-                when().post("https://restful-api.dev/objects").
+                when().post("https://reqres.in/api/users").
                 then().statusCode(201).log().all();
     }
 }
